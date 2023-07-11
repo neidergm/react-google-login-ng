@@ -33,7 +33,7 @@ const GButton = ({
           window.google.accounts.id.renderButton(document.getElementById(BTN_CONTAINER), config || {})
         }
 
-        if (method !== "button") {
+        if (method !== "button" && !disabled) {
           // Show One Tap
           window.google.accounts.id.prompt(() => { });
         }
@@ -52,7 +52,13 @@ const GButton = ({
     return () => {
       document.querySelector('body')?.removeChild(script)
     }
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    if (disabled) {
+      window.google?.accounts.id.cancel();
+    }
+  }, [disabled])
 
   return (
     <div id={BTN_CONTAINER} className={disabled ? "disabled" : ""}>
