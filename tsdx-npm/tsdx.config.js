@@ -13,8 +13,11 @@ module.exports = {
           }),
         ],
         // only write out CSS for the first bundle (avoids redundant extra files)
-         extract: !!options.writeMeta,
-         inject: false,
+        //  extract: !!options.writeMeta,
+        //  inject: false,
+         extract: false,
+         inject: true,
+         minimize: true,
       })
     );
     return config;
