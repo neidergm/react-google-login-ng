@@ -9,8 +9,8 @@ const App = () => {
       <div style={{ maxWidth: "300px", display: "grid", placeContent: "center" }}>
         <GoogleLogin
           client_id='your_client_id_here'
-          successCallback={({ credendial, select_by }) => {
-            console.log(credendial, select_by);
+          successCallback={({ credential, select_by }) => {
+            console.log(credential, select_by);
           }}
         />
       </div>

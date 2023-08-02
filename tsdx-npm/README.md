@@ -27,8 +27,8 @@ Then use it in your component like this:
 ```js
    <GoogleLogin
       client_id='your_client_id_here'
-      successCallback={({ credendial, select_by }) => {
-        console.log(credendial, select_by);
+      successCallback={({ credential, select_by }) => {
+        console.log(credential, select_by);
       }}
     />
 ```

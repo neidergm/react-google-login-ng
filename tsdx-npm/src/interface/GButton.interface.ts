@@ -18,7 +18,7 @@ export interface I_ComponentProps extends T_GoogleConfig {
 }
 
 type T_ResponseData = {
-    credendial: string,
+    credential: string,
     select_by: 'auto' | 'user' | "user_1tap" | 'user_1tap' | 'btn' | 'btn_confirm' | 'btn_add_session' | 'btn_confirm_add_session',
     token_info_url: string
 }
